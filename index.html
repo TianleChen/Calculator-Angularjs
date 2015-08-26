@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>
+	<body ng-app="cal" ng-controller="calCtrl">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 screen">
+							<p>{{ dis }}</p>
+						</div>
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-7">
+								<button class="btn button" ng-click="pressNum('7')">7</button>
+								<button class="btn button" ng-click="pressNum('8')">8</button>
+								<button class="btn button" ng-click="pressNum('9')">9</button>
+								<button class="btn button" ng-click="pressNum('4')">4</button>
+								<button class="btn button" ng-click="pressNum('5')">5</button>
+								<button class="btn button" ng-click="pressNum('6')">6</button>
+								<button class="btn button" ng-click="pressNum('1')">1</button>
+								<button class="btn button" ng-click="pressNum('2')">2</button>
+								<button class="btn button" ng-click="pressNum('3')">3</button>
+								<button class="btn button" ng-click="pressNum('0')">0</button>
+								<button class="btn button" ng-click="pressNum('00')">00</button>
+								<button class="btn button" ng-click="pressNum('.')">.</button>
+							</div>
+							<div class="col-md-5">
+								<div class="col-md-6">
+									<button class="btn button" ng-click="specSign()">±</button>
+									<button class="btn button" ng-click="pressSign('-')" ng-disabled="signholder">-</button>
+								</div>
+								<div class="col-md-6">
+									<button class="btn button" ng-click="clear()">C</button>
+									<button class="btn button" ng-click="pressSign('*')" ng-disabled="signholder">×</button>
+								</div>
+								<div class="col-md-6">
+									<button class="btn lbutton" ng-click="pressSign('+')" ng-disabled="signholder">+</button>
+								</div>
+								<div class="col-md-6">
+									<button class="btn button" ng-click="pressSign('/')" ng-disabled="signholder">÷</button>
+									<button class="btn button" ng-click="result()">=</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src= "logic.js"></script>
+	</body>
+</html>

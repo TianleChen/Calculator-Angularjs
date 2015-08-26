@@ -1,0 +1,26 @@
+.screen{
+	height: 75px;
+	margin: 50px;
+	font-size: 50px;
+	background-color: #7FAD7F;
+	text-align: right;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+.button{
+	width: 75px;
+	height: 75px;
+	font-size: 40px;
+}
+
+.lbutton{
+	width: 75px;
+	height: 150px;
+	font-size: 40px;
+}
+
+.ldiv{
+	width: 75px;
+	height: 150px;
+}
